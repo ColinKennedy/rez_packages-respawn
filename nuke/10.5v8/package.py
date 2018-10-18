@@ -16,6 +16,8 @@ requires = [
 
 install_root = 'install'
 
+build_command = "python {root}/rezbuild.py {install}"
+
 
 def commands():
     '''Create the environment variables and aliases needed to run this product.'''
