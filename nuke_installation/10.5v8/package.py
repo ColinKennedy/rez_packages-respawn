@@ -35,7 +35,7 @@ def commands():
             env.PATH.append(env.INSTALL_ROOT.get())
 
         chooser.add_common_commands(
-            'nuke',
+            'nuke_installation',
             version=str(version),
             env=env,
             alias=alias,
