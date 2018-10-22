@@ -21,10 +21,10 @@ def commands():
     import os
 
     # IMPORT THIRD-PARTY LIBRARIES
-    from rez.utils import system as system_
+    from rez.utils import system
     from rez import config
 
-    with system_.add_sys_paths([config.config.package_definition_python_path]):
+    with system.add_sys_paths([config.config.package_definition_python_path]):
         from rezzurect import chooser
 
         install_root = 'install'
