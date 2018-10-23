@@ -7,9 +7,18 @@
 import sys
 import os
 
+# IMPORT THIRD-PARTY LIBRARIES
+from rez.utils import system
+from rez import config
+
 
 def build(source_path, build_path, install_path, targets):
-    pass
+    with system.add_sys_paths([config.config.package_definition_python_path]):
+        # IMPORT THIRD-PARTY LIBRARIES
+        from rezzurect import manager
+
+        rezzurect_destination = os.path.join(install_path, 'python')
+        manager.copy_rezzurect_to(rezzurect_destination)
 
 
 if __name__ == '__main__':
