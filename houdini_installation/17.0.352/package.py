@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-'''The main package definition for Houdini 16.5.536.'''
+'''The main package definition for Houdini 17.0.352.'''
 
 name = 'houdini_installation'
 
-version = '16.5.536'
+version = '17.0.352'
 
-description = 'Houdini 16.5.536'
+description = 'Houdini 17.0.352'
 
 authors = ['SideFX']
 
