@@ -18,7 +18,14 @@ def commands():
     import os
 
     additional_python_paths = os.getenv('RESPAWN_PYTHONPATH', '').split(os.pathsep)
-    sys.path.extend(additional_python_paths)  # TODO : Check if I need this line. Delete if not
 
+    # Any Rez package that adds this package into `requires` will need to
+    # have these paths added to `sys.path`. Otherwise, package.py will fail
+    #
+    sys.path.extend(additional_python_paths)
+
+    # And we need to add the same paths to `env.PYTHONPATH` or `rezbuild.py`
+    # commands will fail to import `rezzurect`
+    #
     for path in additional_python_paths:
         env.PYTHONPATH.append(path)
