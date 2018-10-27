@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-'''The main package definition for Nuke 11.2v3.'''
+'''The main package definition for Houdini 11.2v3.'''
 
 name = 'houdini'
 
