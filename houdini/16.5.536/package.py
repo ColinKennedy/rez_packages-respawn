@@ -22,9 +22,6 @@ build_command = "python {root}/rezbuild.py {install}"
 def commands():
     '''Create the environment variables and aliases needed to run this product.'''
     # IMPORT THIRD-PARTY LIBRARIES
-    from rez.utils import system
-    from rez import config
-
     from rezzurect import chooser
 
     chooser.add_common_commands(
