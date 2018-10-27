@@ -25,15 +25,14 @@ def commands():
     from rez.utils import system
     from rez import config
 
-    with system.add_sys_paths([config.config.package_definition_python_path]):
-        from rezzurect import chooser
+    from rezzurect import chooser
 
-        chooser.add_common_commands(
-            'houdini',
-            version=str(version),
-            env=env,
-            alias=alias,
-        )
+    chooser.add_common_commands(
+        'houdini',
+        version=str(version),
+        env=env,
+        alias=alias,
+    )
 
 
 timestamp = 1537925779

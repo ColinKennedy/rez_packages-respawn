@@ -12,6 +12,8 @@ authors = ['SideFX']
 
 install_root = 'install'
 
+requires = ['respawn_includes-1.0.0']
+
 build_command = "python {root}/rezbuild.py {install}"
 
 
@@ -21,21 +23,17 @@ def commands():
     import os
 
     # IMPORT THIRD-PARTY LIBRARIES
-    from rez.utils import system
-    from rez import config
+    from rezzurect import chooser
 
-    with system.add_sys_paths([config.config.package_definition_python_path]):
-        from rezzurect import chooser
+    install_root = 'install'
+    env.INSTALL_ROOT = os.path.join('{root}', install_root)
 
-        install_root = 'install'
-        env.INSTALL_ROOT = os.path.join('{root}', install_root)
-
-        chooser.add_common_commands(
-            'houdini_installation',
-            version=str(version),
-            env=env,
-            alias=alias,
-        )
+    chooser.add_common_commands(
+        'houdini_installation',
+        version=str(version),
+        env=env,
+        alias=alias,
+    )
 
 
 timestamp = 1537925779
