@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
-'''The main package definition for Nuke 10.5v8.'''
+'''The main package definition for Houdini 16.5.536.'''
 
-name = 'nuke_installation'
+name = 'houdini_installation'
 
-version = '10.5v8'
+version = '16.5.536'
 
-description = 'Nuke 10.5v8'
+description = 'Houdini 16.5.536'
 
-authors = ['Foundry']
+authors = ['SideFX']
 
 install_root = 'install'
 
@@ -28,14 +28,10 @@ def commands():
         from rezzurect import chooser
 
         install_root = 'install'
-        install_folder = os.path.join('{root}', install_root)
-        env.INSTALL_ROOT = install_folder
-
-        if os.path.isdir(env.INSTALL_ROOT.get()):
-            env.PATH.append(env.INSTALL_ROOT.get())
+        env.INSTALL_ROOT = os.path.join('{root}', install_root)
 
         chooser.add_common_commands(
-            'nuke_installation',
+            'houdini_installation',
             version=str(version),
             env=env,
             alias=alias,

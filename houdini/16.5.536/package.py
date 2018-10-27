@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 
-'''The main package definition for Nuke 10.5v8.'''
+'''The main package definition for Houdini 16.5.536.'''
 
-name = 'nuke_installation'
+name = 'houdini'
 
-version = '10.5v8'
+version = '16.5.536'
 
-description = 'Nuke 10.5v8'
+description = 'Houdini 16.5.536 - Production Build'
 
-authors = ['Foundry']
+authors = ['SideFX']
+
+requires = [
+    'houdini_installation-{version}'.format(version=version),
+]
 
 install_root = 'install'
 
@@ -17,9 +21,6 @@ build_command = "python {root}/rezbuild.py {install}"
 
 def commands():
     '''Create the environment variables and aliases needed to run this product.'''
-    # IMPORT STANDARD LIBRARIES
-    import os
-
     # IMPORT THIRD-PARTY LIBRARIES
     from rez.utils import system
     from rez import config
@@ -27,15 +28,8 @@ def commands():
     with system.add_sys_paths([config.config.package_definition_python_path]):
         from rezzurect import chooser
 
-        install_root = 'install'
-        install_folder = os.path.join('{root}', install_root)
-        env.INSTALL_ROOT = install_folder
-
-        if os.path.isdir(env.INSTALL_ROOT.get()):
-            env.PATH.append(env.INSTALL_ROOT.get())
-
         chooser.add_common_commands(
-            'nuke_installation',
+            'houdini',
             version=str(version),
             env=env,
             alias=alias,
