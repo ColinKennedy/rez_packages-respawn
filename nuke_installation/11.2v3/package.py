@@ -2,6 +2,11 @@
 
 '''The main package definition for Nuke 11.2v3.'''
 
+# IMPORT THIRD-PARTY LIBRARIES
+from rez.utils.lint_helper import alias
+from rez.utils.lint_helper import env
+
+
 name = 'nuke_installation'
 
 version = '11.2v3'

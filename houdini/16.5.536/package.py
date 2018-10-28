@@ -2,6 +2,11 @@
 
 '''The main package definition for Houdini 16.5.536.'''
 
+# IMPORT THIRD-PARTY LIBRARIES
+from rez.utils.lint_helper import alias
+from rez.utils.lint_helper import env
+
+
 name = 'houdini'
 
 version = '16.5.536'

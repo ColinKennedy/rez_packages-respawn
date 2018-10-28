@@ -2,6 +2,11 @@
 
 '''The main package definition for Houdini 17.0.352.'''
 
+# IMPORT THIRD-PARTY LIBRARIES
+from rez.utils.lint_helper import alias
+from rez.utils.lint_helper import env
+
+
 name = 'houdini_installation'
 
 version = '17.0.352'

@@ -2,6 +2,11 @@
 
 '''The main package definition for Houdini 16.5.536.'''
 
+# IMPORT THIRD-PARTY LIBRARIES
+from rez.utils.lint_helper import alias
+from rez.utils.lint_helper import env
+
+
 name = 'houdini_installation'
 
 version = '16.5.536'
@@ -9,7 +14,6 @@ version = '16.5.536'
 description = 'Houdini 16.5.536'
 
 authors = ['SideFX']
-
 
 requires = ['respawn_includes-1.0.0']
 

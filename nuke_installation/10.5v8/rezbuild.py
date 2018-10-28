@@ -7,6 +7,7 @@
 import sys
 import os
 
+
 def build(source_path, build_path, install_path, targets):
     # IMPORT THIRD-PARTY LIBRARIES
     from rezzurect.utils import rezzurect_config
