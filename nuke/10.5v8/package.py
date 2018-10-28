@@ -14,8 +14,6 @@ requires = [
     'nuke_installation-{version}'.format(version=version),
 ]
 
-install_root = 'install'
-
 build_command = "python {root}/rezbuild.py {install}"
 
 

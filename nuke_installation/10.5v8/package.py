@@ -23,11 +23,10 @@ def commands():
     import os
 
     # IMPORT THIRD-PARTY LIBRARIES
+    from rezzurect.utils import rezzurect_config
     from rezzurect import chooser
 
-    install_root = 'install'
-    install_folder = os.path.join('{root}', install_root)
-    env.INSTALL_ROOT = install_folder
+    env.INSTALL_ROOT = os.path.join('{root}', rezzurect_config.INSTALL_FOLDER_NAME)
 
     if os.path.isdir(env.INSTALL_ROOT.get()):
         env.PATH.append(env.INSTALL_ROOT.get())

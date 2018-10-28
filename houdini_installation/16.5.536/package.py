@@ -10,7 +10,6 @@ description = 'Houdini 16.5.536'
 
 authors = ['SideFX']
 
-install_root = 'install'
 
 requires = ['respawn_includes-1.0.0']
 
@@ -23,10 +22,10 @@ def commands():
     import os
 
     # IMPORT THIRD-PARTY LIBRARIES
+    from rezzurect.utils import rezzurect_config
     from rezzurect import chooser
 
-    install_root = 'install'
-    env.INSTALL_ROOT = os.path.join('{root}', install_root)
+    env.INSTALL_ROOT = os.path.join('{root}', rezzurect_config.INSTALL_FOLDER_NAME)
 
     chooser.add_common_commands(
         'houdini_installation',
