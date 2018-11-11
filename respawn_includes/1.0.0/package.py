@@ -17,6 +17,10 @@ def commands():
     import sys
     import os
 
+    rezzurect_location = os.environ['REZZURECT_LOCATION']
+    sys.path.append(rezzurect_location)
+    env.PYTHONPATH.append(rezzurect_location)
+
     additional_python_paths = os.getenv('RESPAWN_PYTHONPATH', '').split(os.pathsep)
 
     # Any Rez package that adds this package into `requires` will need to
