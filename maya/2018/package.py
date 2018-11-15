@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 
-'''The main package definition for Nuke 10.5v8.'''
+'''The main package definition for Maya 10.5v8.'''
 
-name = 'nuke'
+name = 'maya'
 
-version = '10.5v8'
+version = '2018'
 
-description = 'Nuke 10.5v8'
+description = 'Maya 2018'
 
-authors = ['Foundry']
+authors = ['Autodesk']
 
 requires = [
-    'nuke_installation-{version}'.format(version=version),
+    'maya_installation-{version}'.format(version=version),
 ]
 
 build_command = "python {root}/rezbuild.py {install}"

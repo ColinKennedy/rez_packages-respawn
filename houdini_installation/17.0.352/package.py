@@ -15,8 +15,6 @@ description = 'Houdini 17.0.352'
 
 authors = ['SideFX']
 
-install_root = 'install'
-
 requires = ['respawn_includes-1.0.0']
 
 build_command = "python {root}/rezbuild.py {install}"

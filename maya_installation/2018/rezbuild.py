@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-'''The main module which installs Nuke onto the user's system.'''
+'''The main module which installs Maya onto the user's system.'''
 
 # IMPORT STANDARD LIBRARIES
 import sys
@@ -20,7 +20,7 @@ def build(source_path, build_path, install_path, targets):
 
     environment.init(source_path, package_install_path)
 
-    adapter = chooser.get_build_adapter('nuke_installation', version)
+    adapter = chooser.get_build_adapter('maya_installation', version)
     adapter.make_install()
 
     rezzurect_destination = os.path.join(install_path, 'python')

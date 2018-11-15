@@ -9,11 +9,7 @@ import os
 
 
 def build(source_path, build_path, install_path, targets):
-    # IMPORT THIRD-PARTY LIBRARIES
-    from rezzurect import manager
-
-    rezzurect_destination = os.path.join(install_path, 'python')
-    manager.copy_rezzurect_to(rezzurect_destination)
+    pass
 
 
 if __name__ == '__main__':

@@ -7,15 +7,13 @@ from rez.utils.lint_helper import alias
 from rez.utils.lint_helper import env
 
 
-name = 'nuke_installation'
+name = 'maya_installation'
 
-version = '10.5v8'
+version = '2018'
 
-description = 'Nuke 10.5v8'
+description = 'Maya 2018'
 
-authors = ['Foundry']
-
-install_root = 'install'
+authors = ['Autodesk']
 
 requires = ['respawn_includes-1.0.0']
 
@@ -37,7 +35,7 @@ def commands():
         env.PATH.append(env.INSTALL_ROOT.get())
 
     chooser.add_common_commands(
-        'nuke_installation',
+        'maya_installation',
         version=str(version),
         env=env,
         alias=alias,

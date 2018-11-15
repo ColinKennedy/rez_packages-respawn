@@ -15,8 +15,6 @@ description = 'Nuke 10.5v8'
 
 authors = ['Foundry']
 
-install_root = 'install'
-
 requires = ['respawn_includes-1.0.0']
 
 build_command = "python {root}/rezbuild.py {install}"
