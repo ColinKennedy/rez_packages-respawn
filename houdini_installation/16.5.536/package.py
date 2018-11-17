@@ -29,7 +29,7 @@ def commands():
     from rezzurect.utils import config_helper
     from rezzurect import chooser
 
-    env.INSTALL_ROOT = os.path.join('{root}', config_helper.INSTALL_FOLDER_NAME)
+    env.HOUDINI_INSTALL_ROOT = os.path.join('{root}', config_helper.INSTALL_FOLDER_NAME)
 
     chooser.add_common_commands(
         'houdini_installation',

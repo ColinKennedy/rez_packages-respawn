@@ -29,10 +29,10 @@ def commands():
     from rezzurect.utils import config_helper
     from rezzurect import chooser
 
-    env.INSTALL_ROOT = os.path.join('{root}', config_helper.INSTALL_FOLDER_NAME)
+    env.NUKE_INSTALL_ROOT = os.path.join('{root}', config_helper.INSTALL_FOLDER_NAME)
 
-    if os.path.isdir(env.INSTALL_ROOT.get()):
-        env.PATH.append(env.INSTALL_ROOT.get())
+    if os.path.isdir(env.NUKE_INSTALL_ROOT.get()):
+        env.PATH.append(env.NUKE_INSTALL_ROOT.get())
 
     chooser.add_common_commands(
         'nuke_installation',
