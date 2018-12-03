@@ -17,6 +17,7 @@ authors = ['Foundry']
 
 requires = [
     'nuke_installation-{version}'.format(version=version),
+    'tank-1.0.0',
 ]
 
 install_root = 'install'
